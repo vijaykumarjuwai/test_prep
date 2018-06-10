@@ -1,0 +1,26 @@
+<body>
+    <div class="page">
+        <header>
+            <h1>THIS IS THE TEST PAGE</h1>
+            <h5>TEST PREP IS FUN INC</h5>
+        </header>
+        <div class="testPage">
+            <div class="passage" *ngFor="let passage of passages">
+                <h5>{{ passage.header }}</h5>
+                <h4>{{ passage.introduction }}</h4>
+                <ul>
+                    <li class="paragraph" *ngFor="let paragraph of passage.text"> {{ paragraph.paragraph }} </li>
+                </ul>
+            </div>    
+            
+            <div class="questions">
+                <ul class="question" *ngFor="let question of questions">{{ question.question }}
+                    <li><input type="radio" name="choice">{{ question.answer[0].choice }}</li>
+                    <li><input type="radio" name="choice">{{ question.answer[1].choice }}</li>
+                    <li><input type="radio" name="choice">{{ question.answer[2].choice }}</li>
+                    <li><input type="radio" name="choice">{{ question.answer[3].choice }}</li>
+                </ul>    
+            </div>
+        </div>
+    </div>
+</body>
